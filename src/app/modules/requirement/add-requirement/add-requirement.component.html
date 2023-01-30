@@ -1,34 +1,35 @@
-<div class="card">
+<div class="card" style="margin: 2rem;">
 	<form [formGroup]="addJobFormGroup" (ngSubmit)="onSubmit()">
-		<div class="row">
-			<div class="col-md-6">
-				<mat-form-field>
+		<div class="row" style="padding: 1rem;">
+			<div class="col-md-6" style="margin-bottom:1rem">
+				<mat-form-field appearance="outline" floatLabel="always">
 					<mat-label>Job Title</mat-label>
-					<input matInput formControlName="jobTitle" />         
-					<!-- <mat-error *ngIf="checkError('jobTitle', 'required')">Job Name is required</mat-error>         
-        <mat-error *ngIf="checkError('jobTitle', 'minlength')">Job Name should be more than 3 characters</mat-error>         
-        <mat-error *ngIf="checkError('jobTitle', 'maxlength')">Job Name should be less than 100 characters</mat-error>        -->
+					<input matInput formControlName="jobTitle" />
+					<mat-error style="color: red;"
+						*ngIf="checkError('jobTitle', 'required')">Job Title is required</mat-error>         
 				</mat-form-field>
 			</div>
-			<div class="col-md-6">
-				<mat-form-field>
+			<div class="col-md-6" style="margin-bottom:1rem">
+				<mat-form-field appearance="outline" floatLabel="always">
 					<mat-label>Job Code</mat-label>
 					<input matInput formControlName="jobCode" />         
-					<!-- <mat-error *ngIf="checkError('jobCode', 'required')">Job Name is required</mat-error>         
-        <mat-error *ngIf="checkError('jobCode', 'minlength')">Job Code should be more than 3 characters</mat-error>         
-        <mat-error *ngIf="checkError('jobCode', 'maxlength')">Job Code should be less than 100 characters</mat-error>        -->
+					<mat-error style="color: red;"
+						*ngIf="checkError('jobCode', 'required')">Job Code is required</mat-error>         
+
 				</mat-form-field>
 			</div>
-			<div class="col-md-6">
-				<mat-form-field>
+			<div class="col-md-6" style="margin-bottom:1rem">
+				<mat-form-field appearance="outline" floatLabel="always">
 					<mat-label>Job Description</mat-label>
-					<textarea matInput formControlName="jobDescription"></textarea>
-					<!-- <mat-error *ngIf="checkError('jobDescription', 'required')">Job description is required</mat-error>               
-        <mat-error *ngIf="checkError('jobDescription', 'maxlength')">Job description should be less than 100 characters</mat-error>          -->
+					<input matInput formControlName="jobDescription" />         
+					<mat-error style="color: red;"
+						*ngIf="checkError('jobDescription', 'required')">Job Description is required</mat-error>         
+
 				</mat-form-field>
 			</div>
-			<div class="col-md-6">
-				<mat-form-field>
+
+			<div class="col-md-6" style="margin-bottom:1rem">
+				<mat-form-field appearance="outline" floatLabel="always">
 					<mat-label>Select an option</mat-label>
 					<mat-select [(value)]="selectedOption">
 						<mat-option *ngFor="let option of options" [value]="option">{{ option }}</mat-option>

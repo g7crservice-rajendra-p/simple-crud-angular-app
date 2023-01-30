@@ -17,7 +17,7 @@ export class AddRequirementComponent implements OnInit {
 			jobTitle: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(100)]),
 			jobDescription: new FormControl('', [Validators.required, Validators.maxLength(100)]),
 			selectedOption: new FormControl(this.options[0], [Validators.required]),
-			jobCode: new FormControl('jb_001', [Validators.required]),
+			jobCode: new FormControl('', [Validators.required]),
 			isChecked: new FormControl(false, [Validators.required])
 		});
 	}
@@ -28,5 +28,12 @@ export class AddRequirementComponent implements OnInit {
 		// new File([data], 'filename.json', { type: 'text/json;charset=utf-8' });
 
 		console.log(this.addJobFormGroup.value);
+	}
+	checkError(controlName: string, type: string) {
+		const value = this.addJobFormGroup.controls[controlName].value;
+		if (value) {
+			return false;
+		}
+		return true;
 	}
 }

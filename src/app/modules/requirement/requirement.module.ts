@@ -6,9 +6,35 @@ import { RequirementRoutingModule } from './requirement-routing.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import {
+	IgxAvatarModule,
+	IgxButtonModule,
+	IgxDialogModule,
+	IgxDropDownModule,
+	IgxIconModule,
+	IgxInputGroupModule,
+	IgxRippleModule,
+	IgxToggleModule
+} from 'igniteui-angular';
 
 @NgModule({
 	declarations: [AddRequirementComponent],
-	imports: [CommonModule, RequirementRoutingModule, FormsModule, ReactiveFormsModule, MatInputModule, MatSelectModule, MatCheckboxModule]
+	imports: [
+		CommonModule,
+		RequirementRoutingModule,
+		FormsModule,
+		ReactiveFormsModule,
+		MatInputModule,
+		MatSelectModule,
+		MatCheckboxModule,
+		IgxAvatarModule,
+		IgxButtonModule,
+		IgxDialogModule,
+		IgxDropDownModule,
+		IgxIconModule,
+		IgxInputGroupModule,
+		IgxRippleModule,
+		IgxToggleModule
+	]
 })
 export class RequirementModule {}
